@@ -92,145 +92,144 @@ const HorizontalLayout = (props) => {
     hidden: "footer-hidden",
   };
 
-  // const navbarWrapperClasses = {
-  //   floating: "navbar-floating",
-  //   sticky: "navbar-sticky",
-  //   static: "navbar-static",
-  // };
+  const navbarWrapperClasses = {
+    floating: "navbar-floating",
+    sticky: "navbar-sticky",
+    static: "navbar-static",
+  };
 
-  // const navbarClasses = {
-  //   floating:
-  //     contentWidth === "boxed" ? "floating-nav container-xxl" : "floating-nav",
-  //   sticky: "fixed-top",
-  // };
+  const navbarClasses = {
+    floating:
+      contentWidth === "boxed" ? "floating-nav container-xxl" : "floating-nav",
+    sticky: "fixed-top",
+  };
 
   const bgColorCondition =
-    navbarColor !== "" && navbarColor !== "light" && navbarColor !== "white";
+    navbarColor !== "" && navbarColor !== "light" && navbarColor !== "orange";
 
   if (!isMounted) {
     return null;
   }
 
   return (
-    // <div
-    //   className={classnames(
-    //     `wrapper horizontal-layout horizontal-menu ${
-    //       navbarWrapperClasses[navbarType] || "navbar-floating"
-    //     } ${footerClasses[footerType] || "footer-static"} menu-expanded`
-    //   )}
-    //   {...(isHidden ? { "data-col": "1-column" } : {})}
-    // >
-    //   <Navbar
-    //     expand="lg"
-    //     container={false}
-    //     className={classnames(
-    //       "header-navbar navbar-fixed align-items-center navbar-shadow navbar-brand-center",
-    //       {
-    //         "navbar-scrolled": navbarScrolled,
-    //       }
-    //     )}
-    //   >
-    //     {!navbar && (
-    //       <div className="navbar-header d-xl-block d-none">
-    //         <ul className="nav navbar-nav">
-    //           <NavItem>
-    //             <Link to="/" className="navbar-brand">
-    //               <span className="brand-logo">
-    //                 <img src={themeConfig.app.appLogoImage} alt="logo" />
-    //               </span>
-    //               <h2 className="brand-text mb-0">{themeConfig.app.appName}</h2>
-    //             </Link>
-    //           </NavItem>
-    //         </ul>
-    //       </div>
-    //     )}
+    <div
+      className={classnames(
+        `wrapper horizontal-layout horizontal-menu ${
+          navbarWrapperClasses[navbarType] || "navbar-floating"
+        } ${footerClasses[footerType] || "footer-static"} menu-expanded`
+      )}
+      {...(isHidden ? { "data-col": "1-column" } : {})}
+    >
+      <Navbar
+        expand="lg"
+        container={false}
+        className={classnames(
+          "header-navbar navbar-fixed align-items-center navbar-shadow navbar-brand-center",
+          {
+            "navbar-scrolled": navbarScrolled,
+          }
+        )}
+      >
+        {!navbar && (
+          <div className="navbar-header d-xl-block d-none">
+            <ul className="nav navbar-nav">
+              <NavItem>
+                <Link to="/" className="navbar-brand">
+                  <span className="brand-logo">
+                    <img src={themeConfig.app.appLogoImage} alt="logo" />
+                  </span>
+                  <h2 className="brand-text mb-0">{themeConfig.app.appName}</h2>
+                </Link>
+              </NavItem>
+            </ul>
+          </div>
+        )}
 
-    //     <div className="navbar-container d-flex content">
-    //       {navbar ? (
-    //         navbar({ skin, setSkin })
-    //       ) : (
-    //         <NavbarComponent skin={skin} setSkin={setSkin} />
-    //       )}
-    //     </div>
-    //   </Navbar>
-    //   {!isHidden ? (
-    //     <div className="horizontal-menu-wrapper">
-    //       <Navbar
-    //         tag="div"
-    //         expand="sm"
-    //         light={skin !== "dark"}
-    //         dark={skin === "dark" || bgColorCondition}
-    //         className={classnames(
-    //           `header-navbar navbar-horizontal navbar-shadow menu-border`,
-    //           {
-    //             [navbarClasses[navbarType]]: navbarType !== "static",
-    //             "floating-nav":
-    //               (!navbarClasses[navbarType] && navbarType !== "static") ||
-    //               navbarType === "floating",
-    //           }
-    //         )}
-    //       >
-    //         {menu ? (
-    //           menu({ menuData, routerProps, currentActiveItem })
-    //         ) : (
-    //           <MenuComponent menuData={menuData} />
-    //         )}
-    //       </Navbar>
-    //     </div>
-    //   ) : null}
+        <div className="navbar-container d-flex content">
+          {navbar ? (
+            navbar({ skin, setSkin })
+          ) : (
+            <NavbarComponent skin={skin} setSkin={setSkin} />
+          )}
+        </div>
+      </Navbar>
+      {!isHidden ? (
+        <div className="horizontal-menu-wrapper">
+          <Navbar
+            tag="div"
+            expand="sm"
+            light={skin !== "dark"}
+            dark={skin === "dark" || bgColorCondition}
+            className={classnames(
+              `header-navbar navbar-horizontal navbar-shadow menu-border`,
+              {
+                [navbarClasses[navbarType]]: navbarType !== "static",
+                "floating-nav":
+                  (!navbarClasses[navbarType] && navbarType !== "static") ||
+                  navbarType === "floating",
+              }
+            )}
+          >
+            {menu ? (
+              menu({ menuData, routerProps, currentActiveItem })
+            ) : (
+              <MenuComponent menuData={menuData} />
+            )}
+          </Navbar>
+        </div>
+      ) : null}
 
-    //   {children}
-    //   {themeConfig.layout.customizer === true ? (
-    //     <Customizer
-    //       skin={skin}
-    //       isRtl={isRtl}
-    //       layout={layout}
-    //       setSkin={setSkin}
-    //       setIsRtl={setIsRtl}
-    //       isHidden={isHidden}
-    //       setLayout={setLayout}
-    //       footerType={footerType}
-    //       navbarType={navbarType}
-    //       setIsHidden={setIsHidden}
-    //       themeConfig={themeConfig}
-    //       navbarColor={navbarColor}
-    //       contentWidth={contentWidth}
-    //       setFooterType={setFooterType}
-    //       setNavbarType={setNavbarType}
-    //       setLastLayout={setLastLayout}
-    //       setNavbarColor={setNavbarColor}
-    //       setContentWidth={setContentWidth}
-    //     />
-    //   ) : null}
-    //   <footer
-    //     className={classnames(
-    //       `footer footer-light ${footerClasses[footerType] || "footer-static"}`,
-    //       {
-    //         "d-none": footerType === "hidden",
-    //       }
-    //     )}
-    //   >
-    //     {footer ? (
-    //       footer
-    //     ) : (
-    //       <FooterComponent
-    //         footerType={footerType}
-    //         footerClasses={footerClasses}
-    //       />
-    //     )}
-    //   </footer>
+      {children}
+      {themeConfig.layout.customizer === true ? (
+        <Customizer
+          skin={skin}
+          isRtl={isRtl}
+          layout={layout}
+          setSkin={setSkin}
+          setIsRtl={setIsRtl}
+          isHidden={isHidden}
+          setLayout={setLayout}
+          footerType={footerType}
+          navbarType={navbarType}
+          setIsHidden={setIsHidden}
+          themeConfig={themeConfig}
+          navbarColor={navbarColor}
+          contentWidth={contentWidth}
+          setFooterType={setFooterType}
+          setNavbarType={setNavbarType}
+          setLastLayout={setLastLayout}
+          setNavbarColor={setNavbarColor}
+          setContentWidth={setContentWidth}
+        />
+      ) : null}
+      <footer
+        className={classnames(
+          `footer footer-light ${footerClasses[footerType] || "footer-static"}`,
+          {
+            "d-none": footerType === "hidden",
+          }
+        )}
+      >
+        {footer ? (
+          footer
+        ) : (
+          <FooterComponent
+            footerType={footerType}
+            footerClasses={footerClasses}
+          />
+        )}
+      </footer>
 
-    //   {themeConfig.layout.scrollTop === true ? (
-    //     <div className="scroll-to-top">
-    //       <ScrollToTop showOffset={300} className="scroll-top d-block">
-    //         <Button className="btn-icon" color="primary">
-    //           <ArrowUp size={14} />
-    //         </Button>
-    //       </ScrollToTop>
-    //     </div>
-    //   ) : null}
-    // </div>
-    <div></div>
+      {themeConfig.layout.scrollTop === true ? (
+        <div className="scroll-to-top">
+          <ScrollToTop showOffset={300} className="scroll-top d-block">
+            <Button className="btn-icon" color="primary">
+              <ArrowUp size={14} />
+            </Button>
+          </ScrollToTop>
+        </div>
+      ) : null}
+    </div>
   );
 };
 export default HorizontalLayout;

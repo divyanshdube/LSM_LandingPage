@@ -45,9 +45,9 @@ export const useLayout = () => {
   }
 
   return {
-    // layout: store.layout,
-    // setLayout,
-    // lastLayout: store.lastLayout,
-    // setLastLayout,
+ layout: store.layout,
+    setLayout,
+    lastLayout: store.lastLayout,
+    setLastLayout,   
   };
 };
