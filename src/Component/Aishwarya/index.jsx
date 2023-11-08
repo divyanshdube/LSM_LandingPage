@@ -6,7 +6,8 @@ import Testimonials from './Testimonials';
 import Blogs from './Blogs';
 // import KeynoteSpeaker from "./KeynoteSpeaker/KeynoteSpeaker"
 import Contact from './Contact';
-import Footer from './Footer/footer';
+// import Footer from './Footer/footer';
+import Footer from './Footer/Footer';
 
 
 
