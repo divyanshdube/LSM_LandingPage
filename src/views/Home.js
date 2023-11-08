@@ -15,7 +15,7 @@ import KeynoteSpeaker from "../Component/Gaurav/KeynoteSpeaker/KeynoteSpeaker.js
 import CarouselCaptions from "../Component/Gaurav/carousel/carousel.jsx";
 import KnowledgeBase from "../Component/Gaurav/LifeChangingProcess/index.jsx";
 import Pricing from "../Component/Gaurav/Pricing/index.jsx";
-import Blogs from "../Component/Aishwarya/Blogs/index.jsx"
+// import Blogs from "../Component/Aishwarya/Blogs/index.jsx"
 import LastSection from "../Component/Aishwarya/index.jsx";
 const Home = () => {
   return (
@@ -29,7 +29,7 @@ const Home = () => {
       <Pricing/>
       <KeynoteSpeaker/>
       {/* <BlogCard /> */}
-      <Blogs/>
+      {/* <Blogs/> */}
       <LastSection/>
     </>
 

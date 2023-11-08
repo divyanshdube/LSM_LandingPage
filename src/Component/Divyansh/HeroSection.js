@@ -19,7 +19,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div style={{margin:"0px", padding:"0px", backgroundColor:"black"}}>
+    <div style={{margin:"0px", padding:"0px", backgroundColor:"transaparent"}}>
     <ImageGallery
       items={images}
       showThumbnails={false}

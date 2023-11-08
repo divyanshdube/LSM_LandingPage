@@ -4,7 +4,9 @@ import "./style.css";
 import CardTitles from './Testimonials/CardTitles';
 import Testimonials from './Testimonials';
 import Blogs from './Blogs';
-import KeynoteSpeaker from "./KeynoteSpeaker/KeynoteSpeaker"
+// import KeynoteSpeaker from "./KeynoteSpeaker/KeynoteSpeaker"
+import Contact from './Contact';
+import Footer from './Footer/footer';
 
 
 
@@ -17,7 +19,8 @@ const LastSection = () => {
       {/* <Breadcrumbs title='Basic Cards' data={[{ title: 'Cards' }, { title: 'Basic Cards' }]} /> */}
       <Testimonials />
       <Blogs/>
-      <KeynoteSpeaker />
+      <Contact />
+      <Footer/>
     </Fragment>
   )
 }

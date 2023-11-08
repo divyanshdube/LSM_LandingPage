@@ -1,6 +1,6 @@
 import React from 'react'
 
-const KeynoteCardHeader = () => {
+const ContactCardHeader = () => {
   return (
     <div className='text-center'>
       <h1 className='mt-5' style={{fontSize:"40px"}}>Contact Us</h1>
@@ -19,4 +19,4 @@ delivering the best results to the clients.
   )
 }
 
-export default KeynoteCardHeader
+export default ContactCardHeader

@@ -12,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
   CardBody,
+  CardText,
   Button,
   Label,
   Input,
@@ -73,11 +74,11 @@ const BasicHookForm = () => {
   };
 
   return (
-    <Row className="match-height">
-      <Col lg="6" md="6">
-      <Card>
+    <Row className="match-height" style={{justifyContent:"center"}}>
+      <Col lg="6" md="6" style={{justifyContent:"center"}}>
+      <Card >
           <CardHeader>
-            <CardTitle tag="h1">Contact Us</CardTitle>
+            {/* <CardTitle tag="h1">Contact Us</CardTitle> */}
           </CardHeader>
           <CardBody>
             <Form onSubmit={handleSubmit(onSubmit)}>
@@ -153,85 +154,7 @@ const BasicHookForm = () => {
           </CardBody>
       </Card>
     </Col>
-    {/* <Col lg="6" md="6">
-      <Card>
-          <CardHeader>
-            <CardTitle tag="h1">Contact Us</CardTitle>
-          </CardHeader>
-          <CardBody>
-            <Form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-1">
-                <Label className="form-label" for="firstNameBasic">
-                  First Name
-                </Label>
-                <Controller
-                  defaultValue=""
-                  control={control}
-                  id="firstNameBasic"
-                  name="firstNameBasic"
-                  render={({ field }) => (
-                    <Input
-                      placeholder="Bruce"
-                      invalid={errors.firstNameBasic && true}
-                      {...field}
-                    />
-                  )}
-                />
-              </div>
-              <div className="mb-1">
-                <Label className="form-label" for="lastNameBasic">
-                  Last Name
-                </Label>
-                <Controller
-                  defaultValue=""
-                  control={control}
-                  id="lastNameBasic"
-                  name="lastNameBasic"
-                  render={({ field }) => (
-                    <Input
-                      placeholder="Wayne"
-                      invalid={errors.lastNameBasic && true}
-                      {...field}
-                    />
-                  )}
-                />
-              </div>
-              <div className="mb-1">
-                <Label className="form-label" for="emailBasic">
-                  Email
-                </Label>
-                <Controller
-                  defaultValue=""
-                  control={control}
-                  id="emailBasic"
-                  name="emailBasic"
-                  render={({ field }) => (
-                    <Input
-                      type="email"
-                      placeholder="bruce.wayne@email.com"
-                      invalid={errors.emailBasic && true}
-                      {...field}
-                    />
-                  )}
-                />
-              </div>
-              <div className="d-flex justify-content-center">
-                <Button className="me-1" color="primary" type="submit">
-                  Submit
-                </Button>
-                <Button
-                  outline
-                  color="secondary"
-                  type="reset"
-                  onClick={handleReset}
-                >
-                  Reset
-                </Button>
-              </div>
-            </Form>
-          </CardBody>
-      </Card>
-    </Col> */}
+    
     </Row>
   );
 };

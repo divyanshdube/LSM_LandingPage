@@ -16,21 +16,25 @@ import {
 // ** Images
 // import img1 from "@src/assets/images/slider/04.jpg";
 import img2 from "@src/assets/images/slider/03.jpg";
+import img1 from "../../../assets/images/slider/blog-image1.jpg";
+// import img2 from "../../../assets/images/slider/blog-image2.jpg";
+import img3 from "../../../assets/images/slider/blog-image3.jpg";
+import img4 from "../../../assets/images/slider/blog-image4.jpg";
 
 const BlogCard = (cols) => {
   const colsProps = cols ? cols : { md: 4, xs: 12 };
   return (
-    <div> 
+    <div>
       <Row className="match-height" style={{ justifyContent: "center" }}>
-        <Col lg="3" md="6">
+        <Col lg="4" md="6">
           <Card>
             <CardBody>
-              <CardTitle tag="h4">Card Title</CardTitle>
+              <CardTitle tag="h4">How to Hire Only Professional?</CardTitle>
               <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
             </CardBody>
-            <img className="img-fluid" src={img2} alt="Card cap" />
+            <img className="img-fluid" src={img3} alt="Card cap" />
             <CardBody>
-              <CardText>Bear claw sesame snaps gummies chocolate.</CardText>
+              {/* <CardText>Bear claw sesame snaps gummies chocolate.</CardText> */}
               <CardLink href="/" onClick={(e) => e.preventDefault()}>
                 Blog Link
               </CardLink>
@@ -40,7 +44,25 @@ const BlogCard = (cols) => {
             </CardBody>
           </Card>
         </Col>
-        <Col lg="3" md="6">
+        <Col lg="4" md="6">
+          <Card>
+            <CardBody>
+              <CardTitle tag="h4">How to Achieve Higher Profits?</CardTitle>
+              <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
+            </CardBody>
+            <img className="img-fluid" src={img3} alt="Card cap" />
+            <CardBody>
+              {/* <CardText>Bear claw sesame snaps gummies chocolate.</CardText> */}
+              <CardLink href="/" onClick={(e) => e.preventDefault()}>
+                Blog Link
+              </CardLink>
+              <CardLink href="/" onClick={(e) => e.preventDefault()}>
+                Share
+              </CardLink>
+            </CardBody>
+          </Card>
+        </Col>
+        {/* <Col lg="3" md="6">
           <Card>
             <CardBody>
               <CardTitle tag="h4">Blog Title</CardTitle>
@@ -57,36 +79,18 @@ const BlogCard = (cols) => {
               </CardLink>
             </CardBody>
           </Card>
-        </Col>
-        <Col lg="3" md="6">
-          <Card>
-            <CardBody>
-              <CardTitle tag="h4">Blog Title</CardTitle>
-              <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
-            </CardBody>
-            <img className="img-fluid" src={img2} alt="Card cap" />
-            <CardBody>
-              <CardText>Bear claw sesame snaps gummies chocolate.</CardText>
-              <CardLink href="/" onClick={(e) => e.preventDefault()}>
-                Blog Link
-              </CardLink>
-              <CardLink href="/" onClick={(e) => e.preventDefault()}>
-                Share
-              </CardLink>
-            </CardBody>
-          </Card>
-        </Col>
+        </Col> */}
       </Row>
       <Row className="match-height" style={{ justifyContent: "center" }}>
-        <Col lg="3" md="6">
+        <Col lg="4" md="6">
           <Card>
             <CardBody>
-              <CardTitle tag="h4">Card Title</CardTitle>
+              <CardTitle tag="h4">Top 5 Tips to Improve Your Department.</CardTitle>
               <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
             </CardBody>
-            <img className="img-fluid" src={img2} alt="Card cap" />
+            <img className="img-fluid" src={img3} alt="Card cap" />
             <CardBody>
-              <CardText>Bear claw sesame snaps gummies chocolate.</CardText>
+              {/* <CardText>Bear claw sesame snaps gummies chocolate.</CardText> */}
               <CardLink href="/" onClick={(e) => e.preventDefault()}>
                 Blog Link
               </CardLink>
@@ -96,7 +100,25 @@ const BlogCard = (cols) => {
             </CardBody>
           </Card>
         </Col>
-        <Col lg="3" md="6">
+        <Col lg="4" md="6">
+          <Card>
+            <CardBody>
+              <CardTitle tag="h4">How to Hire Only Professional?</CardTitle>
+              <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
+            </CardBody>
+            <img className="img-fluid" src={img3} alt="Card cap" />
+            <CardBody>
+              {/* <CardText>Bear claw sesame snaps gummies chocolate.</CardText> */}
+              <CardLink href="/" onClick={(e) => e.preventDefault()}>
+                Blog Link
+              </CardLink>
+              <CardLink href="/" onClick={(e) => e.preventDefault()}>
+                Share
+              </CardLink>
+            </CardBody>
+          </Card>
+        </Col>
+        {/* <Col lg="3" md="6">
           <Card>
             <CardBody>
               <CardTitle tag="h4">Blog Title</CardTitle>
@@ -113,25 +135,7 @@ const BlogCard = (cols) => {
               </CardLink>
             </CardBody>
           </Card>
-        </Col>
-        <Col lg="3" md="6">
-          <Card>
-            <CardBody>
-              <CardTitle tag="h4">Blog Title</CardTitle>
-              <CardSubtitle className="text-muted">Subtitle</CardSubtitle>
-            </CardBody>
-            <img className="img-fluid" src={img2} alt="Card cap" />
-            <CardBody>
-              <CardText>Bear claw sesame snaps gummies chocolate.</CardText>
-              <CardLink href="/" onClick={(e) => e.preventDefault()}>
-                Blog Link
-              </CardLink>
-              <CardLink href="/" onClick={(e) => e.preventDefault()}>
-                Share
-              </CardLink>
-            </CardBody>
-          </Card>
-        </Col>
+        </Col> */}
         
       </Row>
       <div className="d-flex justify-content-center">
